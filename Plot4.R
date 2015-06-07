@@ -22,9 +22,9 @@ DataHouse <- CleanFormate(HousePower1)
 png(filename = "plot4.png",width = 480, height = 480,units = "px")
 par(mfrow =c(2,2))
 
-plot(y=DataHouse$Global_active_power,x=DataHouse$Time,type = "l",xlab = "",ylab = "Global Active Power (kilowatts)")
+plot(y=DataHouse$Global_active_power,x=DataHouse$Time,type = "l",xlab = "",ylab = "Global Active Power")
 
-plot(y=DataHouse$Voltage,x=DataHouse$Time,type = "l",xlab = "Datetime",ylab = "Voltage")
+plot(y=DataHouse$Voltage,x=DataHouse$Time,type = "l",xlab = "datetime",ylab = "Voltage")
 
 plot(DataHouse$Time,DataHouse$Sub_metering_1,type = "n",xlab = "",ylab = "Energy sub metering")
 points(DataHouse$Time,DataHouse$Sub_metering_1,type="l",col="black")
@@ -32,7 +32,7 @@ points(DataHouse$Time,DataHouse$Sub_metering_2,type="l",col="red")
 points(DataHouse$Time,DataHouse$Sub_metering_3,type="l",col="blue")
 legend("topright",c("Sub_metering_1", "Sub_metering_2","Sub_metering_3"), lty = c(1),col=c("black","red","blue"),cex = 0.75,bty = "n")
 
-plot(y=DataHouse$Global_reactive_power,x=DataHouse$Time,type = "l",xlab = "Datetime",ylab = "Global_reactive_power")
+plot(y=DataHouse$Global_reactive_power,x=DataHouse$Time,type = "l",xlab = "datetime",ylab = "Global_reactive_power")
 
 dev.off()
 
